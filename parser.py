@@ -58,8 +58,10 @@ class Parser:
         if not post_list:
             return
         for entity in post_list[:50]:
-            content_data: dict[str, dict] = (entity.get('content', {}).get('itemContent').
-                                             get('tweet_results', {}).get('result', {}).get('legacy'))
+            content_data: dict[str, dict] = (
+                entity.get('content', {}).get('itemContent').
+                get('tweet_results', {}).get('result', {}).get('legacy')
+            )
             await self.get_tweet_info(content_data=content_data)
 
     async def process_pinned_twit(self, tweet_data: dict) -> None:
