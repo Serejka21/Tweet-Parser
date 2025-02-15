@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.envrc
+
+# Python package files
+*.egg-info/
+*.egg
+*.whl
+
+dist/
+build/
+
+# Logs and debug files
+*.log
+logs/
+*.out
+*.pid
+*.prof
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Playwright files
+playwright/.cache
+trace.zip
+
+# IDE and Editor settings
+.vscode/
+.idea/
+*.iml
+*.sublime*
+
+# OS files
+.DS_Store
+Thumbs.db
