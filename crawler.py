@@ -38,7 +38,7 @@ class Crawler:
     async def launch_browser(self, url: str) -> None:
         logger.info('Launching browser...')
         try:
-            async with async_playwright() as self.pw:
+            async with async_playwright() as self.pw: #TODO: refactor context manager to exclude page close issue
                 self.browser: Browser = await self.pw.chromium.launch(
                     headless=self.headless_mode,
                     args=consts.BROWSER_INIT_ARGS
